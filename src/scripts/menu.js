@@ -21,6 +21,20 @@ document.querySelectorAll("#mobile-menu li").forEach((e) => {
     });
 });
 
+document.documentElement.classList.toggle(
+    "dark",
+    localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+);
+
+document.querySelectorAll("#theme-toggle").forEach((e) => {
+    e.addEventListener("click", (e) => {
+        document.documentElement.classList.toggle("dark");
+        localStorage.theme = localStorage.theme === "dark" ? "light" : "dark";
+    });
+});
+
 window.addEventListener("resize", () => {
     if (
         window.innerWidth >= 1024 &&
