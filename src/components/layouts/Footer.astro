@@ -3,13 +3,12 @@ import AcmeLogo from "../images/AcmeLogo.astro";
 ---
 
 <footer class="flex w-full flex-col gap-4 rounded-xl p-4 dark:text-white">
-	<section class="flex flex-col justify-between gap-4 md:flex-row md:gap-0">
-		<AcmeLogo class:list={"h-[35px] w-[125px]"} />
+	<section class="flex flex-col justify-evenly gap-4 md:flex-row md:gap-0">
 		<section
 			class="md:text-baseline flex w-[85%] flex-col justify-around gap-8 md:flex-row md:gap-0"
 		>
 			<div class="flex flex-col gap-4">
-				<h2 class="text-lg font-semibold">Acme</h2>
+				<AcmeLogo class:list={"h-[28px] w-[100]"} />
 				<ul class="space-y-4 *:hover:underline md:space-y-1.5">
 					<li><a href="/">Home</a></li>
 					<li><a href="/about">About</a></li>
@@ -28,7 +27,8 @@ import AcmeLogo from "../images/AcmeLogo.astro";
 					</li>
 					<li>
 						<button class="hover:cursor-pointer hover:underline"
-							>Conversion Rate Optimization</button>
+							>Conversion Rate Optimization</button
+						>
 					</li>
 					<li><button class="hover:cursor-pointer hover:underline">A/B Testing</button></li>
 					<li><button class="hover:cursor-pointer hover:underline">Data Visualization</button></li>
@@ -39,18 +39,20 @@ import AcmeLogo from "../images/AcmeLogo.astro";
 				<ul class="space-y-4 *:hover:underline md:space-y-1.5">
 					<li><button class="hover:cursor-pointer hover:underline">Help Center</button></li>
 					<li><button class="hover:cursor-pointer hover:underline">Acme Forums</button></li>
-					<li><button class="hover:cursor-pointer hover:underline">Contact</button></li>
+					<li><a href="/contact">Contact</a></li>
 				</ul>
 			</div>
 		</section>
 	</section>
+	<hr class="my-4 h-0.5 border-t-0 bg-neutral-200 md:mx-12 dark:bg-neutral-700" />
+	<section
+		class="flex flex-col-reverse justify-evenly gap-8 md:flex-row md:items-center md:gap-16 dark:text-white"
+	>
+		<div class="text-xs font-semibold">Copyright &copy; 2025 Brenden Kohut</div>
+		<div class="flex flex-col gap-8 md:flex-row md:gap-24">
+			<button class="hover:cursor-pointer hover:underline">Terms of Service</button>
+			<button class="hover:cursor-pointer hover:underline">Privacy Policy</button>
+			<button class="hover:cursor-pointer hover:underline">Sitemap</button>
+		</div>
+	</section>
 </footer>
-<hr class="my-4 h-0.5 border-t-0 bg-neutral-200 md:mx-12 md:my-8 dark:bg-neutral-900" />
-<section class="flex flex-col-reverse gap-8 md:flex-row md:items-center md:gap-16 dark:text-white">
-	<div class="text-xs font-semibold">Copyright &copy; 2025 Brenden Kohut</div>
-	<div class="flex flex-col gap-8 md:flex-row md:gap-24">
-		<button class="hover:underline">Terms of Service</button>
-		<button class="hover:underline">Privacy Policy</button>
-		<button class="hover:underline">Sitemap</button>
-	</div>
-</section>

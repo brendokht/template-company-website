@@ -19,7 +19,7 @@ import RightArrow from "../images/RightArrow.astro";
 			<button class="hover:cursor-pointer hover:underline">Blog</button>
 		</li>
 		<li>
-			<button class="hover:cursor-pointer hover:underline">Contact</button>
+			<a href="/contact">Contact</a>
 		</li>
 		<li id="theme-toggle">
 			<div
@@ -69,12 +69,13 @@ import RightArrow from "../images/RightArrow.astro";
 			</button>
 		</li>
 		<li>
-			<button
-				class="flex w-full justify-between rounded-md px-6 py-3 hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			<a
+				href="/contact"
+				class="flex w-full justify-between rounded-md px-6 py-3 hover:bg-neutral-300 dark:hover:bg-neutral-700"
 			>
 				Contact
 				<RightArrow class:list={"w-3 fill-black dark:fill-white"} />
-			</button>
+			</a>
 		</li>
 		<li id="theme-toggle">
 			<div
