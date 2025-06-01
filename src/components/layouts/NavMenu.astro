@@ -1,0 +1,75 @@
+---
+import MobileMenuButton from "./MobileMenuButton.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+import RightArrow from "../svgs/RightArrow.svg";
+---
+
+<div>
+  <ul id="menu" class="hidden lg:flex lg:gap-20 *:hover:underline">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/about">About</a>
+    </li>
+    <li>
+      <a href="#">Solutions</a>
+    </li>
+    <li>
+      <a href="#">Blog</a>
+    </li>
+    <li>
+      <a href="#">Contact</a>
+    </li>
+    <li id="theme-toggle">
+      <div
+        class="hover:bg-neutral-300 dark:hover:bg-neutral-600 p-0.5 rounded-md hover:scale-125 ease-in-out duration-200 hover:cursor-pointer"
+      >
+        <ThemeToggle />
+      </div>
+    </li>
+  </ul>
+  <MobileMenuButton />
+  <ul
+    id="mobile-menu"
+    class="bg-white dark:bg-neutral-900 w-full flex-col gap-4 hidden absolute left-0 mt-3 py-5 shadow-lg"
+  >
+    <li>
+      <a href="#" class="px-6 py-3 flex justify-between">
+        Home
+        <RightArrow />
+      </a>
+    </li>
+    <li>
+      <a href="#" class="px-6 py-3 flex justify-between">
+        About
+        <RightArrow />
+      </a>
+    </li>
+    <li>
+      <a href="#" class="px-6 py-3 flex justify-between">
+        Solutions
+        <RightArrow />
+      </a>
+    </li>
+    <li>
+      <a href="#" class="px-6 py-3 flex justify-between">
+        Blog
+        <RightArrow />
+      </a>
+    </li>
+    <li>
+      <a href="#" class="px-6 py-3 flex justify-between">
+        Contact
+        <RightArrow />
+      </a>
+    </li>
+    <li id="theme-toggle">
+      <div
+        class="px-6 py-3 flex hover:bg-neutral-600 rounded-md hover:scale-125 ease-in-out duration-200 hover:cursor-pointer"
+      >
+        <ThemeToggle />
+      </div>
+    </li>
+  </ul>
+</div>

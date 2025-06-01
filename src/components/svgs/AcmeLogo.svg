@@ -1,10 +1,4 @@
----
-
----
-
-<footer class="flex flex-col gap-4 w-full p-4 rounded-xl dark:text-white">
-    <section class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between">
-        <svg
+<svg
             class="h-[35px] w-[125px]"
             viewBox="0 0 155 43"
             version="1.1"
@@ -64,52 +58,3 @@
                 </g>
             </g>
         </svg>
-        <section
-            class="flex flex-col gap-8 md:gap-0 md:text-baseline md:flex-row w-[85%] justify-around"
-        >
-            <div class="flex flex-col gap-4">
-                <h2 class="text-lg font-semibold">Acme</h2>
-                <ul class="space-y-4 md:space-y-1.5 *:hover:underline">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Legal</a></li>
-                    <li><a href="#">Service Status</a></li>
-                </ul>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h2 class="text-lg font-semibold">Solutions</h2>
-                <ul class="space-y-4 md:space-y-1.5 *:hover:underline">
-                    <li><a href="#">A/B Testing</a></li>
-                    <li><a href="#">Performance Testing</a></li>
-                    <li><a href="#">Accessibility Testing</a></li>
-                    <li><a href="#">Functional Testing</a></li>
-                    <li><a href="#">Security Testing</a></li>
-                </ul>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h2 class="text-lg font-semibold">Support</h2>
-                <ul class="space-y-4 md:space-y-1.5 *:hover:underline">
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Acme Forums</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </section>
-    </section>
-    <hr
-        class="my-4 md:my-8 h-0.5 border-t-0 bg-neutral-200 dark:bg-neutral-900 md:mx-12"
-    />
-    <section
-        class="flex flex-col-reverse md:flex-row md:items-center gap-8 md:gap-16"
-    >
-        <div class="text-xs font-semibold">
-            Copyright &copy; 2025 Brenden Kohut
-        </div>
-        <div class="flex flex-col md:flex-row gap-8 md:gap-24">
-            <a class="hover:underline" href="#">Terms of Service</a>
-            <a class="hover:underline" href="#">Privacy Policy</a>
-            <a class="hover:underline" href="#">Sitemap</a>
-        </div>
-    </section>
-</footer>
