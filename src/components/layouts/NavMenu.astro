@@ -13,17 +13,17 @@ import RightArrow from "../images/RightArrow.astro";
 			<a href="/about">About</a>
 		</li>
 		<li>
-			<button>Solutions</button>
+			<button class="hover:cursor-pointer hover:underline">Solutions</button>
 		</li>
 		<li>
-			<button>Blog</button>
+			<button class="hover:cursor-pointer hover:underline">Blog</button>
 		</li>
 		<li>
-			<button>Contact</button>
+			<button class="hover:cursor-pointer hover:underline">Contact</button>
 		</li>
 		<li id="theme-toggle">
 			<div
-				class="rounded-md p-0.5 duration-200 ease-in-out hover:scale-125 hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-600"
+				class="rounded-md duration-200 ease-in-out hover:scale-[115%] hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
 			>
 				<ThemeToggle />
 			</div>
@@ -32,41 +32,53 @@ import RightArrow from "../images/RightArrow.astro";
 	<MobileMenuButton />
 	<ul
 		id="mobile-menu"
-		class="absolute left-0 mt-3 hidden w-full flex-col gap-4 bg-white py-5 shadow-lg dark:bg-neutral-900"
+		class="absolute left-0 mt-3 hidden w-full flex-col gap-4 bg-white px-6 py-5 shadow-lg dark:bg-neutral-900"
 	>
 		<li>
-			<a href="/" class="flex w-full justify-between px-6 py-3">
+			<a
+				href="/"
+				class="flex w-full justify-between rounded-md px-6 py-3 hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
 				Home
 				<RightArrow class:list={"w-3 fill-black dark:fill-white"} />
 			</a>
 		</li>
 		<li>
-			<a href="/about" class="flex w-full justify-between px-6 py-3">
+			<a
+				href="/about"
+				class="flex w-full justify-between rounded-md px-6 py-3 hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
 				About
 				<RightArrow class:list={"w-3 fill-black dark:fill-white"} />
 			</a>
 		</li>
 		<li>
-			<button class="flex w-full justify-between px-6 py-3">
+			<button
+				class="hover flex w-full justify-between rounded-md px-6 py-3 hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
 				Solutions
 				<RightArrow class:list={"w-3 fill-black dark:fill-white"} />
 			</button>
 		</li>
 		<li>
-			<button class="flex w-full justify-between px-6 py-3">
+			<button
+				class="flex w-full justify-between rounded-md px-6 py-3 hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
 				Blog
 				<RightArrow class:list={"w-3 fill-black dark:fill-white"} />
 			</button>
 		</li>
 		<li>
-			<button class="flex w-full justify-between px-6 py-3">
+			<button
+				class="flex w-full justify-between rounded-md px-6 py-3 hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
 				Contact
 				<RightArrow class:list={"w-3 fill-black dark:fill-white"} />
 			</button>
 		</li>
 		<li id="theme-toggle">
 			<div
-				class="flex rounded-md px-6 py-3 duration-200 ease-in-out hover:scale-125 hover:cursor-pointer hover:bg-neutral-600"
+				class="flex rounded-md px-6 py-3 hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
 			>
 				<ThemeToggle />
 			</div>
