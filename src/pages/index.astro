@@ -2,131 +2,109 @@
 import HeroSection from "../components/HeroSection.astro";
 import Testimonial from "../components/Testimonial.astro";
 import Layout from "../layouts/Layout.astro";
-import OnlineShopping from "../components/svgs/OnlineShopping.svg";
-import Finance from "../components/svgs/Finance.svg";
+import OnlineShopping from "../components/images/OnlineShopping.astro";
+import Finance from "../components/images/Finance.astro";
 ---
 
 <Layout title="Home">
-  <HeroSection />
-  <main
-    class="flex flex-col gap-24 mb-36 *:flex *:flex-col *:gap-8 *:md:gap-16 *:rounded-lg *:py-8 dark:text-white"
-  >
-    <section id="analytics-introduction" class="items-center">
-      <div class="flex flex-col gap-18 md:w-[50%]">
-        <h2 class="text-4xl font-semibold text-center">Welcome to Acme</h2>
-        <p class="text-xl text-center">
-          At Acme, we believe that every user interaction holds valuable
-          insights. Our analytics platform enables you to uncover, understand,
-          and refine your digital strategy. With an intuitive and powerful
-          interface, our solution streamlines the process of gathering,
-          analyzing, and acting on user data—empowering you to make informed
-          decisions that propel your business forward.
-        </p>
-      </div>
-    </section>
-    <section
-      id="data-driven-testing"
-      class="*:flex *:flex-col md:*:flex-row *:justify-evenly *:items-center *:gap-24"
-    >
-      <div>
-        <OnlineShopping />
-        <div class="md:w-[40%] flex flex-col gap-12">
-          <h2 class="text-4xl font-semibold text-center">Why Experiment?</h2>
-          <p class="text-xl">
-            In today's dynamic digital landscape, relying on instinct alone just
-            isn't enough. By embracing a culture of data-driven testing, you
-            can: Enhance User Experience: Understand how real users interact
-            with different designs and functionalities. Increase Conversions:
-            Identify which variations lead to better actions and revenue. Reduce
-            Uncertainty: Replace guesswork with clear, actionable data. Our
-            step-by-step approach guides you from setting up your first test to
-            full-scale optimization, ensuring that every decision is informed by
-            real insights.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section
-      id="case-studies"
-      class="*:flex *:flex-col md:*:flex-row *:justify-evenly *:items-center *:gap-24"
-    >
-      <div>
-        <div class="md:w-[40%] flex flex-col gap-12">
-          <h2 class="text-4xl font-semibold text-center">
-            Real Results, Real Stories.
-          </h2>
-          <p class="text-xl">
-            Join a growing community of innovators who have transformed their
-            websites into high-performing digital assets through analytics.
-            Explore case studies and success stories that illustrate how
-            systematic experimentation leads to measurable business outcomes.
-            Whether you're a startup, a growing business, or an established
-            enterprise, our platform is designed to match your pace of
-            innovation.
-          </p>
-        </div>
-        <Finance />
-      </div>
-      <section></section>
-    </section>
-    <section id="industry-testimonials" class="items-center">
-      <div class="md:w-[50%] flex flex-col gap-12">
-        <h2 class="text-4xl font-semibold text-center">
-          Trusted by Industry Leaders
-        </h2>
-        <p class="text-xl">
-          Leading companies rely on our analytics platform to make data-driven
-          decisions and optimize their user experiences. Discover why they trust
-          us to deliver measurable results.
-        </p>
-      </div>
-      <div class="flex flex-row flex-wrap gap-24 justify-evenly">
-        <Testimonial
-          name="Sarah Johnson"
-          position="Director of Digital Marketing"
-          company="TechCorp"
-        >
-          "Implementing A/B testing with Acme has been transformative for our
-          business. We've seen a 40% increase in conversions and gained
-          invaluable insights about our users. The platform is intuitive and the
-          support team is exceptional."
-        </Testimonial>
-        <Testimonial
-          name="Michael Chen"
-          position="E-commerce Manager"
-          company="StyleBoutique"
-        >
-          "The data-driven insights we've gained have been transformative. Our
-          cart abandonment rate dropped by 25% after implementing changes based
-          on data analysis. This platform has revolutionized our approach to
-          optimization."
-        </Testimonial>
-        <Testimonial
-          name="Rachel Martinez"
-          position="Product Growth Lead"
-          company="FinanceFlow"
-        >
-          "As a fintech startup, we needed to move fast while maintaining trust.
-          This platform helped us test new features confidently, leading to a
-          52% increase in user engagement. The statistical rigor behind each
-          test gives us complete confidence in our decisions."
-        </Testimonial>
-      </div>
-    </section>
-    <section
-      id="get-started"
-      class="items-center from-indigo-100 to-indigo-300 dark:from-indigo-950 dark:to-indigo-800 bg-gradient-to-tr"
-    >
-      <div class="flex flex-col gap-18 py-8 px-4 md:px-0 md:w-[50%]">
-        <h2 class="text-4xl font-semibold text-center">Get Started Today</h2>
-        <p class="text-xl text-center">
-          Ready to unlock the full potential of your online presence? Explore
-          how our platform can help you make data-informed decisions and
-          optimize your user experiences. Reach out for a demo, discover our
-          approach, or explore our blog for insights on driving growth through
-          experimentation. Your path to data-driven success begins here.
-        </p>
-      </div>
-    </section>
-  </main>
+	<HeroSection />
+	<main
+		class="mb-36 flex flex-col gap-24 *:flex *:flex-col *:gap-8 *:rounded-lg *:py-8 *:md:gap-16 dark:text-white"
+	>
+		<section id="analytics-introduction" class="items-center">
+			<div class="flex flex-col gap-18 md:w-[50%]">
+				<h2 class="text-center text-4xl font-semibold">Welcome to Acme</h2>
+				<p class="text-center text-xl">
+					At Acme, we believe that every user interaction holds valuable insights. Our analytics
+					platform enables you to uncover, understand, and refine your digital strategy. With an
+					intuitive and powerful interface, our solution streamlines the process of gathering,
+					analyzing, and acting on user data—empowering you to make informed decisions that propel
+					your business forward.
+				</p>
+			</div>
+		</section>
+		<section
+			id="data-driven-testing"
+			class="*:flex *:flex-col *:items-center *:justify-evenly *:gap-24 md:*:flex-row"
+		>
+			<div>
+				<OnlineShopping class:list={"w-[85%] max-w-2xl md:w-[50%]"} />
+				<div class="flex flex-col gap-12 md:w-[40%]">
+					<h2 class="text-center text-4xl font-semibold">Why Experiment?</h2>
+					<p class="text-xl">
+						In today's dynamic digital landscape, relying on instinct alone just isn't enough. By
+						embracing a culture of data-driven testing, you can: Enhance User Experience: Understand
+						how real users interact with different designs and functionalities. Increase
+						Conversions: Identify which variations lead to better actions and revenue. Reduce
+						Uncertainty: Replace guesswork with clear, actionable data. Our step-by-step approach
+						guides you from setting up your first test to full-scale optimization, ensuring that
+						every decision is informed by real insights.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section
+			id="case-studies"
+			class="*:flex *:flex-col *:items-center *:justify-evenly *:gap-24 md:*:flex-row"
+		>
+			<div>
+				<div class="flex flex-col gap-12 md:w-[40%]">
+					<h2 class="text-center text-4xl font-semibold">Real Results, Real Stories.</h2>
+					<p class="text-xl">
+						Join a growing community of innovators who have transformed their websites into
+						high-performing digital assets through analytics. Explore case studies and success
+						stories that illustrate how systematic experimentation leads to measurable business
+						outcomes. Whether you're a startup, a growing business, or an established enterprise,
+						our platform is designed to match your pace of innovation.
+					</p>
+				</div>
+				<Finance class:list={"w-[85%] max-w-2xl md:w-[50%]"} />
+			</div>
+			<section></section>
+		</section>
+		<section id="industry-testimonials" class="items-center">
+			<div class="flex flex-col gap-12 md:w-[50%]">
+				<h2 class="text-center text-4xl font-semibold">Trusted by Industry Leaders</h2>
+				<p class="text-xl">
+					Leading companies rely on our analytics platform to make data-driven decisions and
+					optimize their user experiences. Discover why they trust us to deliver measurable results.
+				</p>
+			</div>
+			<div class="flex flex-row flex-wrap justify-evenly gap-24">
+				<Testimonial
+					name="Sarah Johnson"
+					position="Director of Digital Marketing"
+					company="TechCorp"
+				>
+					"Implementing A/B testing with Acme has been transformative for our business. We've seen a
+					40% increase in conversions and gained invaluable insights about our users. The platform
+					is intuitive and the support team is exceptional."
+				</Testimonial>
+				<Testimonial name="Michael Chen" position="E-commerce Manager" company="StyleBoutique">
+					"The data-driven insights we've gained have been transformative. Our cart abandonment rate
+					dropped by 25% after implementing changes based on data analysis. This platform has
+					revolutionized our approach to optimization."
+				</Testimonial>
+				<Testimonial name="Rachel Martinez" position="Product Growth Lead" company="FinanceFlow">
+					"As a fintech startup, we needed to move fast while maintaining trust. This platform
+					helped us test new features confidently, leading to a 52% increase in user engagement. The
+					statistical rigor behind each test gives us complete confidence in our decisions."
+				</Testimonial>
+			</div>
+		</section>
+		<section
+			id="get-started"
+			class="items-center bg-gradient-to-tr from-indigo-100 to-indigo-300 dark:from-indigo-950 dark:to-indigo-800"
+		>
+			<div class="flex flex-col gap-18 px-4 py-8 md:w-[50%] md:px-0">
+				<h2 class="text-center text-4xl font-semibold">Get Started Today</h2>
+				<p class="text-center text-xl">
+					Ready to unlock the full potential of your online presence? Explore how our platform can
+					help you make data-informed decisions and optimize your user experiences. Reach out for a
+					demo, discover our approach, or explore our blog for insights on driving growth through
+					experimentation. Your path to data-driven success begins here.
+				</p>
+			</div>
+		</section>
+	</main>
 </Layout>

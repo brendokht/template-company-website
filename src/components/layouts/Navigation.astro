@@ -1,13 +1,11 @@
 ---
 import NavMenu from "./NavMenu.astro";
-import AcmeLogo from "../svgs/AcmeLogo.svg";
+import AcmeLogo from "../images/AcmeLogo.astro";
 ---
 
-<nav
-  class="flex justify-between bg-white dark:bg-neutral-900 w-full dark:text-white"
->
-  <a href="/" class="hover:cursor-pointer hover:scale-110 duration-200">
-    <AcmeLogo />
-  </a>
-  <NavMenu />
+<nav class="flex w-full justify-between bg-white dark:bg-neutral-900 dark:text-white">
+	<a href="/" class="duration-200 hover:scale-110 hover:cursor-pointer">
+		<AcmeLogo class:list={"h-[35px] w-[125px]"} />
+	</a>
+	<NavMenu />
 </nav>

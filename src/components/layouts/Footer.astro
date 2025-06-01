@@ -1,55 +1,56 @@
 ---
-import AcmeLogo from "../svgs/AcmeLogo.svg";
+import AcmeLogo from "../images/AcmeLogo.astro";
 ---
 
-<footer class="flex flex-col gap-4 w-full p-4 rounded-xl dark:text-white">
-  <section class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between">
-    <AcmeLogo />
-    <section
-      class="flex flex-col gap-8 md:gap-0 md:text-baseline md:flex-row w-[85%] justify-around"
-    >
-      <div class="flex flex-col gap-4">
-        <h2 class="text-lg font-semibold">Acme</h2>
-        <ul class="space-y-4 md:space-y-1.5 *:hover:underline">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Legal</a></li>
-          <li><a href="#">Service Status</a></li>
-        </ul>
-      </div>
-      <div class="flex flex-col gap-4">
-        <h2 class="text-lg font-semibold">Solutions</h2>
-        <ul class="space-y-4 md:space-y-1.5 *:hover:underline">
-          <li><a href="#">Web Analytics</a></li>
-          <li><a href="#">User Behavior Analysis</a></li>
-          <li><a href="#">Conversion Rate Optimization</a></li>
-          <li><a href="#">A/B Testing</a></li>
-          <li><a href="#">Data Visualization</a></li>
-        </ul>
-      </div>
-      <div class="flex flex-col gap-4">
-        <h2 class="text-lg font-semibold">Support</h2>
-        <ul class="space-y-4 md:space-y-1.5 *:hover:underline">
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">Acme Forums</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </section>
-  </section>
-  <hr
-    class="my-4 md:my-8 h-0.5 border-t-0 bg-neutral-200 dark:bg-neutral-900 md:mx-12"
-  />
-  <section
-    class="flex flex-col-reverse md:flex-row md:items-center gap-8 md:gap-16"
-  >
-    <div class="text-xs font-semibold">Copyright &copy; 2025 Brenden Kohut</div>
-    <div class="flex flex-col md:flex-row gap-8 md:gap-24">
-      <a class="hover:underline" href="#">Terms of Service</a>
-      <a class="hover:underline" href="#">Privacy Policy</a>
-      <a class="hover:underline" href="#">Sitemap</a>
-    </div>
-  </section>
+<footer class="flex w-full flex-col gap-4 rounded-xl p-4 dark:text-white">
+	<section class="flex flex-col justify-between gap-4 md:flex-row md:gap-0">
+		<AcmeLogo class:list={"h-[35px] w-[125px]"} />
+		<section
+			class="md:text-baseline flex w-[85%] flex-col justify-around gap-8 md:flex-row md:gap-0"
+		>
+			<div class="flex flex-col gap-4">
+				<h2 class="text-lg font-semibold">Acme</h2>
+				<ul class="space-y-4 *:hover:underline md:space-y-1.5">
+					<li><a href="/">Home</a></li>
+					<li><a href="/about">About</a></li>
+					<li><button class="hover:cursor-pointer hover:underline">Careers</button></li>
+					<li><button class="hover:cursor-pointer hover:underline">Blog</button></li>
+					<li><button class="hover:cursor-pointer hover:underline">Legal</button></li>
+					<li><button class="hover:cursor-pointer hover:underline">Service Status</button></li>
+				</ul>
+			</div>
+			<div class="flex flex-col gap-4">
+				<h2 class="text-lg font-semibold">Solutions</h2>
+				<ul class="space-y-4 *:hover:underline md:space-y-1.5">
+					<li><button class="hover:cursor-pointer hover:underline">Web Analytics</button></li>
+					<li>
+						<button class="hover:cursor-pointer hover:underline">User Behavior Analysis</button>
+					</li>
+					<li>
+						<button class="hover:cursor-pointer hover:underline"
+							>Conversion Rate Optimization</button>
+					</li>
+					<li><button class="hover:cursor-pointer hover:underline">A/B Testing</button></li>
+					<li><button class="hover:cursor-pointer hover:underline">Data Visualization</button></li>
+				</ul>
+			</div>
+			<div class="flex flex-col gap-4">
+				<h2 class="text-lg font-semibold">Support</h2>
+				<ul class="space-y-4 *:hover:underline md:space-y-1.5">
+					<li><button class="hover:cursor-pointer hover:underline">Help Center</button></li>
+					<li><button class="hover:cursor-pointer hover:underline">Acme Forums</button></li>
+					<li><button class="hover:cursor-pointer hover:underline">Contact</button></li>
+				</ul>
+			</div>
+		</section>
+	</section>
 </footer>
+<hr class="my-4 h-0.5 border-t-0 bg-neutral-200 md:mx-12 md:my-8 dark:bg-neutral-900" />
+<section class="flex flex-col-reverse gap-8 md:flex-row md:items-center md:gap-16 dark:text-white">
+	<div class="text-xs font-semibold">Copyright &copy; 2025 Brenden Kohut</div>
+	<div class="flex flex-col gap-8 md:flex-row md:gap-24">
+		<button class="hover:underline">Terms of Service</button>
+		<button class="hover:underline">Privacy Policy</button>
+		<button class="hover:underline">Sitemap</button>
+	</div>
+</section>

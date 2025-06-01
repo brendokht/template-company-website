@@ -1,20 +1,18 @@
 ---
-import OnlineCollaboration from "../components/svgs/OnlineCollaboration.svg";
+import OnlineCollaboration from "../components/images/OnlineCollaboration.astro";
 ---
 
 <section
-  id="hero"
-  class="flex flex-col-reverse md:min-h-[85vh] md:gap-16 xl:flex-row items-center justify-evenly from-indigo-100 to-indigo-300 dark:from-indigo-950 dark:to-indigo-700 bg-gradient-to-tr rounded-md px-8 pb-12 md:pb-0 dark:text-white"
+	id="hero"
+	class="flex flex-col-reverse items-center justify-evenly rounded-md bg-gradient-to-tr from-indigo-100 to-indigo-300 px-8 pb-12 md:min-h-[85vh] md:gap-16 md:pb-0 xl:flex-row dark:from-indigo-950 dark:to-indigo-700 dark:text-white"
 >
-  <div class="flex flex-col md:w-[80%] justify-center gap-8 text-center">
-    <h1 class="text-5xl font-bold xl:text-[4rem] text-center">
-      Test Smarter, Grow Faster.
-    </h1>
-    <p class="text-center lg:text-lg xl:text-xl">
-      Harness the power of data-driven experiments to unlock your website’s full
-      potential. From refined user experiences to boosted conversions, every
-      test opens the door to actionable insights.
-    </p>
-  </div>
-  <OnlineCollaboration />
+	<div class="flex flex-col justify-center gap-8 text-center md:w-[80%]">
+		<h1 class="text-center text-5xl font-bold xl:text-[4rem]">Test Smarter, Grow Faster.</h1>
+		<p class="text-center lg:text-lg xl:text-xl">
+			Harness the power of data-driven experiments to unlock your website’s full potential. From
+			refined user experiences to boosted conversions, every test opens the door to actionable
+			insights.
+		</p>
+	</div>
+	<OnlineCollaboration class:list={"h-[300px] w-full sm:h-[325px] md:h-[350px] xl:h-[600px]"} />
 </section>
