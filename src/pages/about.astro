@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SplitTesting from "../components/images/SplitTesting.astro";
+import Journey from "../components/images/Journey.astro";
+import LiveCollaboration from "../components/images/LiveCollaboration.astro";
+---
+
+<Layout title="About">
+	<main class="mb-36 flex flex-col *:flex *:flex-col *:gap-2 *:rounded-lg *:py-8 *:md:gap-4">
+		<section id="about-introduction" class="items-center">
+			<div class="flex flex-col gap-18 md:w-[50%]">
+				<h1 class="text-center text-4xl font-semibold">
+					About Acme: Empowering Data-Driven Growth
+				</h1>
+				<p class="text-center text-xl">
+					At Acme, we believe that informed decisions are the foundation of digital success. We're
+					dedicated to providing businesses with the tools they need to understand their users,
+					optimize their online presence, and achieve measurable growth through data analytics and
+					systematic experimentation.
+				</p>
+			</div>
+		</section>
+		<section
+			id="analytics-mission"
+			class="*:flex *:flex-col-reverse *:items-center *:justify-evenly md:*:flex-row"
+		>
+			<div>
+				<SplitTesting class="max-h-96 w-[85%] max-w-2xl md:max-h-none md:w-[50%]" />
+				<div class="flex flex-col gap-12 md:w-[40%]">
+					<h2 class="text-center text-4xl font-semibold">Our Mission</h2>
+					<p class="text-xl">
+						Our mission is to simplify the complex world of data analytics and optimization, making
+						it accessible and actionable for businesses of all sizes. We strive to empower our users
+						to move beyond guesswork, embracing a culture of continuous learning and improvement
+						based on real user behavior. We're committed to helping you turn data into decisive
+						actions that drive significant returns.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section
+			id="company-story"
+			class="*:flex *:flex-col *:items-center *:justify-evenly *:gap-24 md:*:flex-row"
+		>
+			<div>
+				<div class="flex flex-col gap-12 md:w-[40%]">
+					<h2 class="text-center text-4xl font-semibold">Our Story</h2>
+					<p class="text-xl">
+						Acme was founded by a team of digital marketing enthusiasts and data scientists who
+						recognized a gap in the market for an intuitive, yet powerful, analytics platform. We
+						envisioned a solution that not only facilitated insights but also provided clear,
+						actionable data. Since our inception, we've helped hundreds of businesses unlock their
+						full potential by transforming their approach to digital strategy.
+					</p>
+				</div>
+				<Journey class="max-h-96 w-[85%] max-w-2xl md:max-h-none md:w-[50%]" />
+			</div>
+		</section>
+		<section
+			id="core-values"
+			class="*:flex *:flex-col-reverse *:items-center *:justify-evenly *:gap-24 md:*:flex-row"
+		>
+			<div>
+				<LiveCollaboration class="max-h-96 w-[85%] max-w-2xl md:max-h-none md:w-[50%]" />
+				<div class="flex flex-col gap-12 md:w-[40%]">
+					<h2 class="text-center text-4xl font-semibold">Our Values</h2>
+					<p class="text-xl">
+						We are guided by a set of core values that shape our product and our relationships with
+						our customers:
+					</p>
+					<ul class="mt-4 list-disc pl-5">
+						<li>
+							<strong>Innovation:</strong> Continuously evolving our platform to meet the dynamic needs
+							of the digital landscape.
+						</li>
+						<li>
+							<strong>Clarity:</strong> Providing clear, easy-to-understand insights from complex data.
+						</li>
+						<li>
+							<strong>Empowerment:</strong> Giving our users the confidence to make data-backed decisions.
+						</li>
+						<li>
+							<strong>Support:</strong> Offering exceptional customer service to ensure your success.
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section
+			id="join-our-journey"
+			class="items-center bg-gradient-to-tr from-indigo-100 to-indigo-300 dark:from-indigo-950 dark:to-indigo-800"
+		>
+			<div class="flex flex-col gap-18 px-4 py-8 md:w-[50%] md:px-0">
+				<h2 class="text-center text-4xl font-semibold">Join Our Journey</h2>
+				<p class="text-center text-xl">
+					We invite you to experience the Acme difference. Whether you're looking to enhance user
+					experience, increase conversions, or simply gain a deeper understanding of your audience,
+					our analytics platform is designed to help you succeed. Connect with us today and let's
+					build a data-driven future together.
+				</p>
+			</div>
+		</section>
+	</main>
+</Layout>

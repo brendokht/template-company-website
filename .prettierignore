@@ -1,0 +1,13 @@
+# Ignore artifacts:
+dist
+.astro
+.vscode
+
+# Standard
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+
+# Bun Lockfile
+bun.lock

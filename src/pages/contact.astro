@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact">
+	<div class="flex w-full flex-1 flex-col items-center justify-evenly gap-16 md:flex-row">
+		<section>
+			<h1 class="mb-6 text-center text-4xl font-bold">Contact Us</h1>
+			<p>Feel free to use the form, email us, or call us to get in touch!</p>
+			<div class="mt-6">
+				<h2 class="text-xl font-semibold">Contact Information</h2>
+				<p class="mt-2">
+					Email: <a href="mailto:fakecontact@acme.com" class="text-[#6c63ff]"
+						>fakecontact@acme.com</a
+					>
+				</p>
+				<p class="mt-2">
+					Phone: <a href="tel:+1234567890" class="text-[#6c63ff]">+1 (234) 567-8900</a>
+				</p>
+				<p class="mt-2">Address: 123 Fake Street, Fake City, FK 12345</p>
+			</div>
+		</section>
+		<form class="w-sm rounded-md bg-neutral-50 p-6 shadow-md md:w-md dark:bg-neutral-800">
+			<div class="mb-4">
+				<label
+					class="mb-2 block text-sm font-bold text-neutral-700 dark:text-neutral-300"
+					for="name">Name</label
+				>
+				<input
+					class="focus:shadow-outline w-full appearance-none rounded border border-neutral-300 px-3 py-2 leading-tight text-neutral-700 shadow focus:outline-none dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-300"
+					id="name"
+					name="name"
+					type="text"
+					placeholder="Your Name"
+					required
+				/>
+			</div>
+			<div class="mb-4">
+				<label
+					class="mb-2 block text-sm font-bold text-neutral-700 dark:text-neutral-300"
+					for="email">Email</label
+				>
+				<input
+					class="focus:shadow-outline w-full appearance-none rounded border border-neutral-300 px-3 py-2 leading-tight text-neutral-700 shadow focus:outline-none dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-300"
+					id="email"
+					name="email"
+					type="email"
+					placeholder="Your Email"
+					required
+				/>
+			</div>
+			<div class="mb-4">
+				<label
+					class="mb-2 block text-sm font-bold text-neutral-700 dark:text-neutral-300"
+					for="message">Message</label
+				>
+				<textarea
+					class="focus:shadow-outline max-h-96 min-h-10 w-full appearance-none rounded border border-neutral-300 px-3 py-2 leading-tight text-neutral-700 shadow focus:outline-none dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-300"
+					id="message"
+					name="message"
+					rows="6"
+					placeholder="Your Message"
+					required></textarea>
+			</div>
+			<div class="flex items-center justify-between">
+				<button
+					class="focus:shadow-outline rounded bg-[#6c63ff] px-4 py-2 font-bold text-white hover:cursor-pointer hover:bg-[#625bec] focus:outline-none"
+					type="submit"
+				>
+					Send
+				</button>
+			</div>
+		</form>
+	</div>
+</Layout>

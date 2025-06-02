@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+import DataTrends from "../components/images/DataTrends.astro";
+import SplitTesting from "../components/images/SplitTesting.astro";
+import BullMarket from "../components/images/BullMarket.astro";
+---
+
+<Layout title="Solutions">
+	<main class="mb-36 flex flex-col *:flex *:flex-col *:gap-2 *:rounded-lg *:py-8 *:md:gap-4">
+		<section id="solutions-introduction" class="items-center">
+			<div class="flex flex-col gap-18 md:w-[50%]">
+				<h1 class="text-center text-4xl font-semibold">
+					Our Solutions: Empowering Your Digital Strategy
+				</h1>
+				<p class="text-center text-xl">
+					At Acme, we offer a suite of powerful analytics solutions designed to help businesses of
+					all sizes understand their users, optimize their online presence, and drive measurable
+					growth. Explore our comprehensive offerings tailored to meet your unique needs.
+				</p>
+			</div>
+		</section>
+
+		<section
+			id="web-analytics"
+			class="*:flex *:flex-col-reverse *:items-center *:justify-evenly md:*:flex-row"
+		>
+			<div>
+				<DataTrends class="max-h-96 w-[85%] max-w-2xl md:max-h-none md:w-[50%]" />
+				<div class="flex flex-col gap-12 md:w-[40%]">
+					<h2 class="text-center text-4xl font-semibold">Web Analytics</h2>
+					<p class="text-xl">
+						Gain deep insights into user behavior, traffic sources, and content performance. Our web
+						analytics solution provides comprehensive data visualization and reporting tools,
+						enabling you to make data-driven decisions that enhance user experience and drive
+						engagement.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="ab-testing"
+			class="*:flex *:flex-col *:items-center *:justify-evenly *:gap-24 md:*:flex-row"
+		>
+			<div>
+				<div class="flex flex-col gap-12 md:w-[40%]">
+					<h2 class="text-center text-4xl font-semibold">A/B Testing & Experimentation</h2>
+					<p class="text-xl">
+						Systematically test different versions of your web pages and features to identify what
+						resonates best with your audience. Our A/B testing platform simplifies the process of
+						running experiments, analyzing results, and implementing winning variations to boost
+						conversions and achieve your business goals.
+					</p>
+				</div>
+				<SplitTesting class="max-h-96 w-[85%] max-w-2xl md:max-h-none md:w-[50%]" />
+			</div>
+		</section>
+
+		<section
+			id="conversion-optimization"
+			class="*:flex *:flex-col-reverse *:items-center *:justify-evenly *:gap-24 md:*:flex-row"
+		>
+			<div>
+				<BullMarket class="max-h-96 w-[85%] max-w-2xl md:max-h-none md:w-[50%]" />
+				<div class="flex flex-col gap-12 md:w-[40%]">
+					<h2 class="text-center text-4xl font-semibold">Conversion Rate Optimization (CRO)</h2>
+					<p class="text-xl">
+						Turn visitors into customers with our CRO tools and strategies. We help you identify and
+						eliminate friction points in your user journey, optimize calls-to-action, and streamline
+						conversion funnels to maximize your revenue and achieve higher ROI.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="get-started-solutions"
+			class="items-center bg-gradient-to-tr from-indigo-100 to-indigo-300 dark:from-indigo-950 dark:to-indigo-800"
+		>
+			<div class="flex flex-col gap-18 px-4 py-8 md:w-[50%] md:px-0">
+				<h2 class="text-center text-4xl font-semibold">
+					Ready to Transform Your Digital Presence?
+				</h2>
+				<p class="text-center text-xl">
+					Discover how our analytics solutions can empower your business...
+					<a href="/contact" class="font-semibold underline">Contact us</a> today for a personalized
+					demo and start your journey towards data-driven success.
+				</p>
+			</div>
+		</section>
+	</main>
+</Layout>

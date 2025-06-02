@@ -1,0 +1,90 @@
+---
+import MobileMenuButton from "./MobileMenuButton.astro";
+import ThemeToggle from "../images/ThemeToggle.astro";
+import RightArrow from "../images/RightArrow.astro";
+---
+
+<div>
+	<ul id="menu" class="hidden *:hover:underline lg:flex lg:gap-20">
+		<li>
+			<a href="/">Home</a>
+		</li>
+		<li>
+			<a href="/about">About</a>
+		</li>
+		<li>
+			<a href="/solutions">Solutions</a>
+		</li>
+		<li>
+			<button class="hover:cursor-pointer hover:underline">Blog</button>
+		</li>
+		<li>
+			<a href="/contact">Contact</a>
+		</li>
+		<li id="theme-toggle-desktop" class="theme-toggle">
+			<div
+				class="rounded-md duration-200 ease-in-out hover:scale-[115%] hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
+				<ThemeToggle />
+			</div>
+		</li>
+	</ul>
+	<MobileMenuButton />
+	<ul
+		id="mobile-menu"
+		class="absolute left-0 mt-3 hidden w-full flex-col gap-4 bg-white px-6 py-5 shadow-lg dark:bg-neutral-900"
+	>
+		<li>
+			<a
+				href="/"
+				class="flex w-full justify-between rounded-md px-6 py-3 hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
+				Home
+				<RightArrow class="w-3 fill-black dark:fill-white" />
+			</a>
+		</li>
+		<li>
+			<a
+				href="/about"
+				class="flex w-full justify-between rounded-md px-6 py-3 hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
+				About
+				<RightArrow class="w-3 fill-black dark:fill-white" />
+			</a>
+		</li>
+		<li>
+			<a
+				href="/solutions"
+				class="flex w-full justify-between rounded-md px-6 py-3 hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
+				Solutions
+				<RightArrow class="w-3 fill-black dark:fill-white" />
+			</a>
+		</li>
+		<li>
+			<button
+				class="flex w-full justify-between rounded-md px-6 py-3 hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
+				Blog
+				<RightArrow class="w-3 fill-black dark:fill-white" />
+			</button>
+		</li>
+		<li>
+			<a
+				href="/contact"
+				class="flex w-full justify-between rounded-md px-6 py-3 hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
+				Contact
+				<RightArrow class="w-3 fill-black dark:fill-white" />
+			</a>
+		</li>
+		<li id="theme-toggle-mobile" class="theme-toggle">
+			<div
+				class="flex rounded-md px-6 py-3 hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
+			>
+				<ThemeToggle />
+			</div>
+		</li>
+	</ul>
+</div>
+<script src="../../scripts/menu.ts"></script>
