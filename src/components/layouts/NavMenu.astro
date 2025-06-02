@@ -13,7 +13,7 @@ import RightArrow from "../images/RightArrow.astro";
 			<a href="/about">About</a>
 		</li>
 		<li>
-			<button class="hover:cursor-pointer hover:underline">Solutions</button>
+			<a href="/solutions" class="hover:cursor-pointer hover:underline">Solutions</a>
 		</li>
 		<li>
 			<button class="hover:cursor-pointer hover:underline">Blog</button>
@@ -21,7 +21,7 @@ import RightArrow from "../images/RightArrow.astro";
 		<li>
 			<a href="/contact">Contact</a>
 		</li>
-		<li id="theme-toggle-desktop">
+		<li id="theme-toggle-desktop" class="theme-toggle">
 			<div
 				class="rounded-md duration-200 ease-in-out hover:scale-[115%] hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
 			>
@@ -53,12 +53,13 @@ import RightArrow from "../images/RightArrow.astro";
 			</a>
 		</li>
 		<li>
-			<button
+			<a
+				href="/solutions"
 				class="hover flex w-full justify-between rounded-md px-6 py-3 hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
 			>
 				Solutions
 				<RightArrow class="w-3 fill-black dark:fill-white" />
-			</button>
+			</a>
 		</li>
 		<li>
 			<button
@@ -77,7 +78,7 @@ import RightArrow from "../images/RightArrow.astro";
 				<RightArrow class:list={"w-3 fill-black dark:fill-white"} />
 			</a>
 		</li>
-		<li id="theme-toggle-mobile">
+		<li id="theme-toggle-mobile" class="theme-toggle">
 			<div
 				class="flex rounded-md px-6 py-3 hover:cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-700"
 			>
@@ -86,3 +87,4 @@ import RightArrow from "../images/RightArrow.astro";
 		</li>
 	</ul>
 </div>
+<script src="../../scripts/menu.ts"></script>

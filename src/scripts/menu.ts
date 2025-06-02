@@ -24,7 +24,7 @@ document.documentElement.classList.toggle(
 		(!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
 );
 
-document.querySelectorAll("#theme-toggle").forEach((e) => {
+document.querySelectorAll(".theme-toggle").forEach((e) => {
 	e.addEventListener("click", () => {
 		document.documentElement.classList.toggle("dark");
 		localStorage.theme = localStorage.theme === "dark" ? "light" : "dark";
