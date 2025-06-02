@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+import { loadQuery } from "../../sanity/lib/load-query";
+
+const POSTS_QUERY = `*[_type == "post"]{
+	_id,
+	title,
+	"slug": slug.current,
+	publishedAt,
+	author->{name},
+	excerpt,
+	mainImage{
+		asset->{
+			_id,
+			url
+		}
+	}
+}`;
+
+const { data: posts } = await loadQuery<any>({ query: POSTS_QUERY });
+---
+
+<Layout title="Blog Home">
+	<main class="container mx-auto my-12 px-4">
+		<h1 class="mb-12 text-center text-5xl font-bold">Our Blog</h1>
+		<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+			{posts.map((post) => <BlogCard post={post} />)}
+		</div>
+	</main>
+</Layout>

@@ -1,0 +1,38 @@
+---
+// ./src/pages/post/[slug].astro
+import type { SanityDocument } from "@sanity/client";
+import { loadQuery } from "../../sanity/lib/load-query";
+import Layout from "../../layouts/Layout.astro";
+import PortableText from "../../components/PortableText.astro";
+
+export async function getStaticPaths() {
+	const { data: posts } = await loadQuery<SanityDocument[]>({
+		query: `*[_type == "post"]`,
+	});
+
+	return posts.map(({ slug }) => {
+		return {
+			params: {
+				slug: slug.current,
+			},
+		};
+	});
+}
+
+const { params } = Astro;
+
+const { data: post } = await loadQuery<{ title: string; body: any[] }>({
+	query: `*[_type == "post" && slug.current == $slug][0]`,
+	params,
+});
+---
+
+<Layout title={post.title}>
+	<hr class="my-4 h-0.5 w-full border-t-0 bg-neutral-200 md:mx-12 dark:bg-neutral-700" />
+	<main class="dark:prose-invert prose">
+		<h1 class="mt-4 text-center">{post.title}</h1>
+		<hr class="my-4 h-0.5 w-full border-t-0 bg-neutral-200 md:mx-12 dark:bg-neutral-700" />
+		<PortableText portableText={post.body} />
+	</main>
+	<hr class="my-4 h-0.5 w-full border-t-0 bg-neutral-200 md:mx-12 dark:bg-neutral-700" />
+</Layout>
