@@ -1,26 +1,23 @@
-document.querySelector("#hamburger")?.addEventListener("click", () => {
+const toggleMobileMenu = () => {
 	document.querySelector("#mobile-menu")?.classList.toggle("hidden");
 	document.querySelector("#mobile-menu")?.classList.toggle("flex");
 	document.querySelector("#close")?.classList.toggle("hidden");
 	document.querySelector("#hamburger")?.classList.toggle("hidden");
+};
+
+document.querySelector("#hamburger")?.addEventListener("click", () => {
+	toggleMobileMenu();
 });
 
 document.querySelector("#close")?.addEventListener("click", () => {
-	document.querySelector("#mobile-menu")?.classList.toggle("hidden");
-	document.querySelector("#mobile-menu")?.classList.toggle("flex");
-	document.querySelector("#close")?.classList.toggle("hidden");
-	document.querySelector("#hamburger")?.classList.toggle("hidden");
+	toggleMobileMenu();
 });
 
 document.querySelectorAll("#mobile-menu li").forEach((e) => {
 	e.addEventListener("click", () => {
-		document.querySelector("#mobile-menu")?.classList.toggle("hidden");
-		document.querySelector("#mobile-menu")?.classList.toggle("flex");
-		document.querySelector("#hamburger")?.classList.toggle("hidden");
-		document.querySelector("#close")?.classList.toggle("hidden");
+		toggleMobileMenu();
 	});
 });
-
 document.documentElement.classList.toggle(
 	"dark",
 	localStorage.theme === "dark" ||
@@ -39,9 +36,6 @@ window.addEventListener("resize", () => {
 		window.innerWidth >= 1024 &&
 		!document.querySelector("#mobile-menu")?.classList.contains("hidden")
 	) {
-		document.querySelector("#mobile-menu")?.classList.toggle("hidden");
-		document.querySelector("#mobile-menu")?.classList.toggle("flex");
-		document.querySelector("#hamburger")?.classList.toggle("hidden");
-		document.querySelector("#close")?.classList.toggle("hidden");
+		toggleMobileMenu();
 	}
 });
