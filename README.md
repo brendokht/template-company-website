@@ -131,12 +131,13 @@ You can keep this if you plan on using Netlify, or you can either remove it or c
    SANITY_API_READ_TOKEN="your_sanity_read_token"
    PUBLIC_SANITY_VISUAL_EDITING_ENABLED="true" # or "false"
    ```
-   _Note: Variables prefixed with `PUBLIC_` are exposed to the client-side, however, all public values included in the project were recommended to be public\_
+   _Note: Variables prefixed with `PUBLIC_` are exposed to the client-side, however, all public values included in the project were recommended to be public._
 4. Change git remote URL to avoid accidental pushes to the base project
    ```sh
    git remote set-url origin [YOUR_REPOSITORY_URL]
    git remote -v # confirm the changes
    ```
+5. Remove the redirect in `netlify.toml` (or remove the entire file if you want), since it is only there for the demo website.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
