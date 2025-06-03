@@ -12,6 +12,7 @@
 		"check-types": "astro check"
 	},
 	"dependencies": {
+		"@astrojs/netlify": "^6.3.4",
 		"@astrojs/react": "^4.3.0",
 		"@portabletext/types": "^2.0.13",
 		"@sanity/astro": "^3.2.6",

@@ -8,6 +8,8 @@ import react from "@astrojs/react";
 
 import { loadEnv } from "vite";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 
 const { PUBLIC_SANITY_PROJECT_ID, PUBLIC_SANITY_DATASET } = loadEnv(
@@ -19,6 +21,7 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
+
 	integrations: [
 		sanity({
 			projectId: PUBLIC_SANITY_PROJECT_ID,
@@ -32,4 +35,6 @@ export default defineConfig({
 		}),
 		react(),
 	],
+
+	adapter: netlify(),
 });
